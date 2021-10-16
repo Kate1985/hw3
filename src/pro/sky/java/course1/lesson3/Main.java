@@ -4,123 +4,77 @@ public class Main {
     public static void main(String[] args) {
 
         int clientOs = 1;
-        switch (clientOs) {
-            case 0:
-                System.out.println("Установите версию приложения для iOS по ссылке");
-                break;
-            case 1:
-                System.out.println("Установите версию приложения для Android по ссылке");
+        if (clientOs == 0) {
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        } else {
+            System.out.println("Установите версию приложения для Android по ссылке");
         }
+
 // task 2
         int clientsOs = 1;
         int year = 2014;
-        switch (clientsOs) {
-            case 0:
-                if (year < 2015) {
-                    System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-                } else {
-                    System.out.println("Установите версию приложения для iOS по ссылке");
-                }
-                break;
-            case 1:
-                if (year < 2015) {
-                    System.out.println("Установите облегченную версию приложения для Android по ссылке");
-                } else {
-                    System.out.println("Установите версию приложения для Android по ссылке");
-                }
-                break;
+        boolean isOsAndroid = clientsOs == 1;
+        boolean isLiteNeeded = year < 2015;
+        if (!isOsAndroid) {
+            if (isLiteNeeded) {
+                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+            } else {
+                System.out.println("Установите версию приложения для iOS по ссылке");
+            }
         }
+        if (isOsAndroid) {
+            if (isLiteNeeded) {
+                System.out.println("Установите облегченную версию приложения для Android по ссылке");
+            } else {
+                System.out.println("Установите версию приложения для Android по ссылке");
+            }
+        }
+
         //task3
-        int Year = 2100;
-        if (Year % 4 == 0 && Year % 100 != 0) {
+        int Year = 2021;
+        if ((Year % 4 == 0 && Year % 100 != 0) || (Year % 400 == 0)) {
             System.out.println("Год является високосным");
-        }
-        if (Year % 4 == 0 && Year % 400 == 0) {
-            System.out.println("Год является високосным");
-        }
-        if (Year % 4 == 0 && Year % 100 == 0 && Year % 400 != 0) {
-            System.out.println("Год не является високосным");
-        }
-        if (Year % 4 != 0) {
+        } else {
             System.out.println("Год не является високосным");
         }
 
 
         // task4
         int deliveryDistance = 95;
-        if (deliveryDistance <= 20) {
-            System.out.println("Доставка займет 1 день");
-        }
-        if (deliveryDistance > 20 && deliveryDistance < 60) {
-            System.out.println("Доставка займет 2 дня");
+        int days = 1;
+        if (deliveryDistance > 20) {
+            days++;
         }
         if (deliveryDistance >= 60 && deliveryDistance <= 100) {
-            System.out.println("Доставка займет 3 дня");
+            days++;
+            System.out.println("Доставка займет " + days + " дня");
         }
-        //task4 variant2
-        int DeliveryDistance = 301;
-        int minDistance = 20;
-        int countChangeDistance = (DeliveryDistance - 20) / 40;
-        if (DeliveryDistance <= minDistance) {
-            System.out.println("Доставка займет " + 1 + " день");
-        }
-        if (DeliveryDistance > 20) {
-            System.out.println("Доставка займет " + (1 + (1 + countChangeDistance) + " дней"));
-        }
-
 
         //task5
-        int monthNumber = 13;
+        int monthNumber = 3;
         switch (monthNumber) {
-            case 1: {
+            case 1, 2, 12: {
                 System.out.println("зима");
             }
             break;
-            case 2: {
-                System.out.println("зима");
-            }
-            break;
-            case 3: {
+
+            case 3, 4, 5: {
                 System.out.println("весна");
             }
             break;
-            case 4: {
-                System.out.println("весна");
-            }
-            break;
-            case 5: {
-                System.out.println("весна");
-            }
-            break;
-            case 6: {
+
+            case 6, 7, 8: {
                 System.out.println("лето");
             }
             break;
-            case 7: {
-                System.out.println("лето");
-            }
-            break;
-            case 8: {
-                System.out.println("лето");
-            }
-            break;
-            case 9: {
+
+            case 9, 10, 11: {
                 System.out.println("осень");
-            }
-            break;
-            case 10: {
-                System.out.println("осень");
-            }
-            break;
-            case 11: {
-                System.out.println("осень");
-            }
-            break;
-            case 12: {
-                System.out.println("зима");
             }
             break;
         }
+
+
         if (monthNumber > 12) {
             System.out.println("такого месяца нет");
         }
@@ -148,7 +102,32 @@ public class Main {
         }
 
         //task7
+        int Age = 25;
+        int Salary = 60000;
+        int wantedSum = 330000;
+        int maxPay = Salary / 2;
+        double percent = 10;
+        if (year < 23) {
+            if (Salary > 80000) {
+                percent = percent - 0.7 + 1;
+            } else {
+                percent = percent +1;
+
+            }}
+        if (year < 30 && year >23){
+            if (Salary > 80000) {
+                percent = percent - 0.7 + 0.5;
+            } else {
+                percent = percent + 0.5;
+        }}
+         double payCreditMonth = (wantedSum * ((100+percent)/100)/12);
+         if (payCreditMonth > maxPay) {
+             System.out.println("Максимальный платеж при ЗП " + Salary +  " равен " + maxPay + " рублей. Платеж по кредиту " + payCreditMonth + "рублей. Отказано" );
+         }
+         else {
+             System.out.println("Максимальный платеж при ЗП " + Salary +  " равен " + maxPay + " рублей. Платеж по кредиту " + payCreditMonth + "рублей. Одобрено" );
+         }
 
 
+        }
     }
-}
