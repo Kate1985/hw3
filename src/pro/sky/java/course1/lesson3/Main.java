@@ -111,23 +111,24 @@ public class Main {
             if (Salary > 80000) {
                 percent = percent - 0.7 + 1;
             } else {
-                percent = percent +1;
+                percent = percent + 1;
 
-            }}
-        if (year < 30 && year >23){
+            }
+        }
+        if (year < 30 && year > 23) {
             if (Salary > 80000) {
                 percent = percent - 0.7 + 0.5;
             } else {
                 percent = percent + 0.5;
-        }}
-         double payCreditMonth = (wantedSum * ((100+percent)/100)/12);
-         if (payCreditMonth > maxPay) {
-             System.out.println("Максимальный платеж при ЗП " + Salary +  " равен " + maxPay + " рублей. Платеж по кредиту " + payCreditMonth + "рублей. Отказано" );
-         }
-         else {
-             System.out.println("Максимальный платеж при ЗП " + Salary +  " равен " + maxPay + " рублей. Платеж по кредиту " + payCreditMonth + "рублей. Одобрено" );
-         }
-
-
+            }
         }
+        double payCreditMonth = (wantedSum * ((100 + percent) / 100) / 12);
+        if (payCreditMonth > maxPay) {
+            System.out.println("Максимальный платеж при ЗП " + Salary + " равен " + maxPay + " рублей. Платеж по кредиту " + payCreditMonth + "рублей. Отказано");
+        } else {
+            System.out.println("Максимальный платеж при ЗП " + Salary + " равен " + maxPay + " рублей. Платеж по кредиту " + payCreditMonth + "рублей. Одобрено");
+        }
+
+
     }
+}
