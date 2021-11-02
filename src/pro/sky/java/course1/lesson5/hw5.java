@@ -3,7 +3,7 @@ package pro.sky.java.course1.lesson5;
 public class hw5 {
     private static java.lang.System System;
 
-    //task1
+    //task1//
     public static int[] generateRandomArray() {
         java.util.Random random = new java.util.Random();
         int[] arr = new int[30];
