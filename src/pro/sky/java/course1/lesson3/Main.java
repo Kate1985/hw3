@@ -3,32 +3,30 @@ package pro.sky.java.course1.lesson3;
 public class Main {
     public static void main(String[] args) {
 //
-        int clientOs = 1;
+        int clientOs = 0;
         if (clientOs == 0) {
             System.out.println("Установите версию приложения для iOS по ссылке");
-        } else {
+        } else if (clientOs == 1) {
             System.out.println("Установите версию приложения для Android по ссылке");
         }
 
+
 // task 2
         int clientsOs = 1;
-        int year = 2014;
+        int year = 2019;
         boolean isOsAndroid = clientsOs == 1;
         boolean isLiteNeeded = year < 2015;
-        if (!isOsAndroid) {
-            if (isLiteNeeded) {
-                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-            } else {
-                System.out.println("Установите версию приложения для iOS по ссылке");
-            }
+        if (!isOsAndroid && isLiteNeeded) {
+            System.out.println("Установите облегченную версию приложения для Android по ссылке");}
+        else if(!isOsAndroid && !isLiteNeeded){
+            System.out.println("Установите версию приложения для Android по ссылке");
         }
-        if (isOsAndroid) {
-            if (isLiteNeeded) {
-                System.out.println("Установите облегченную версию приложения для Android по ссылке");
-            } else {
-                System.out.println("Установите версию приложения для Android по ссылке");
-            }
+         if (isOsAndroid && isLiteNeeded) {
+            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+        } else if (isOsAndroid && !isLiteNeeded) {
+            System.out.println("Установите  версию приложения для iOS по ссылке");
         }
+
 
         //task3
         int Year = 2021;
