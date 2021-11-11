@@ -2,7 +2,7 @@ package pro.sky.java.course1.lesson3;
 
 public class Main {
     public static void main(String[] args) {
-//
+
         int clientOs = 0;
         if (clientOs == 0) {
             System.out.println("Установите версию приложения для iOS по ссылке");
