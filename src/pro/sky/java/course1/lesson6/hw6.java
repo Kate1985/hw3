@@ -5,7 +5,7 @@ public class hw6 {
     private static java.lang.System System;
 
     public static void main(String[] args) {
-
+//
             String firstName = "Ivan";
             String middleName = "Ivanovich";
             String lastName = "Ivanov";
