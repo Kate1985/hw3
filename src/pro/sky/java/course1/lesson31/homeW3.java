@@ -1,9 +1,9 @@
-package pro.sky.java.course1.lesson3;
+package pro.sky.java.course1.lesson31;
 
-public class Main {
+public class homeW3 {
     public static void main(String[] args) {
 
-        int clientOs = 0;
+        int clientOs = 1;
         if (clientOs == 0) {
             System.out.println("Установите версию приложения для iOS по ссылке");
         } else if (clientOs == 1) {
@@ -12,18 +12,17 @@ public class Main {
 
 
 // task 2
-        int clientsOs = 1;
-        int year = 2019;
+        int clientsOs = 0;
+        int year = 2016;
         boolean isOsAndroid = clientsOs == 1;
         boolean isLiteNeeded = year < 2015;
-        if (!isOsAndroid && isLiteNeeded) {
+        if (isOsAndroid && isLiteNeeded) {
             System.out.println("Установите облегченную версию приложения для Android по ссылке");}
-        else if(!isOsAndroid && !isLiteNeeded){
-            System.out.println("Установите версию приложения для Android по ссылке");
-        }
-         if (isOsAndroid && isLiteNeeded) {
+         else if (isOsAndroid && !isLiteNeeded) {
+            System.out.println("Установите версию приложения для Android по ссылке");}
+        else if (!isOsAndroid && isLiteNeeded) {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-        } else if (isOsAndroid && !isLiteNeeded) {
+        } else if (!isOsAndroid && !isLiteNeeded) {
             System.out.println("Установите  версию приложения для iOS по ссылке");
         }
 
@@ -130,3 +129,4 @@ public class Main {
 //
     }
 }
+
